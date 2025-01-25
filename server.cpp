@@ -25,7 +25,7 @@ void sendingData(const string &username, int clientSocket, int serverSocket) {
 	while(true) {
     	time_t now = time(0);
 		char* dt = ctime(&now);
-        ofstream testFile("kys.txt", ios_base::app);
+        ofstream testFile("logs.txt", ios_base::app);
         getline(cin, message);
         testFile << dt << "["<<username<<"] " <<  message << "\n";
         testFile.close();
